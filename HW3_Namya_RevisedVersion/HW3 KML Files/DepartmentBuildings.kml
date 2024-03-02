@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>Ford Salvatori Hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28818853024234,34.02154713406602</coordinates></Point>
+</Placemark>
+<Placemark><name>Gerontology center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.29009767632772,34.02010599154422</coordinates></Point>
+</Placemark>
+<Placemark><name>Cinematic Arts School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28631341468385,34.02366683355916</coordinates></Point>
+</Placemark>
+</Document></kml>

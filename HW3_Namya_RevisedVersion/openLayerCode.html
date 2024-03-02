@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OL</title>
+    <script src="https://openlayers.org/api/OpenLayers.js"></script>
+    <style>
+        #map {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Array of 13 points with latitude and longitude
+        var coords = [
+            [34.020556,-118.285436],
+            [34.02154713406602, -118.28818853024234],
+            [34.02010599154422, -118.29009767632772],
+            [34.02366683355916, -118.28631341468385],
+            [34.01891673252021, -118.2908167352302],
+            [34.01980365304956, -118.28124544247733],
+            [34.02524491237083, -118.28522341270839],
+            [34.021690310163685, -118.28313095596786],
+            [34.02030489410648, -118.28417628083218],
+            [34.01884175947583, -118.28676086181471],
+            [34.02041779806548, -118.28602654529098],
+            [34.01929238032499, -118.28424026594935],
+            [34.021978284013294, -118.28547271262394],
+            [34.02020100918175, -118.29421903620806]
+        ];
+
+        // Store the points in the localStorage
+        localStorage.setItem("myCoords", JSON.stringify(coords));
+
+        // Initialize the map
+        var map, basemap, markers;
+
+        function initMap() {
+            map = new OpenLayers.Map('map');
+            basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+            map.addLayer(basemap);
+            markers = new OpenLayers.Layer.Markers("Markers");
+            map.addLayer(markers);
+
+            // Retrieve points from localStorage
+            var myCoords = JSON.parse(localStorage.getItem("myCoords"));
+
+            // Add markers to the map
+            myCoords.forEach(function (coord) {
+                addMarker(coord[0], coord[1]);
+            });
+        }
+
+        function addMarker(latitude, longitude) {
+            var lonLat = new OpenLayers.LonLat(longitude, latitude)
+                .transform(
+                    new OpenLayers.Projection("EPSG:4326"), // from WGS 1984
+                    map.getProjectionObject() // to Spherical Mercator Projection
+                );
+            var point = new OpenLayers.Marker(lonLat);
+            markers.addMarker(point);
+            map.setCenter(lonLat, 8); // Adjust zoom level as needed
+        }
+
+        // Load and set up map layers
+        initMap();
+    </script>
+
+</body>
+
+</html>

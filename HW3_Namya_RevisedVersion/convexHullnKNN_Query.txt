@@ -1,0 +1,44 @@
+--create table
+
+CREATE TABLE Coordinates (
+   Row_ID integer PRIMARY KEY,
+   Location_Point geometry,
+   Location_Name varchar(255)
+);
+
+INSERT INTO Coordinates (Row_ID, Location_Point, Location_Name) VALUES
+   (1, ST_MakePoint(-118.28818853024234, 34.02154713406602), 'Ford Salvatori Hall'),
+   (2, ST_MakePoint(-118.29009767632772, 34.02010599154422), 'Gerontology center'),
+   (3, ST_MakePoint(-118.28631341468385, 34.02366683355916), 'Cinematic Arts School'),
+   (4, ST_MakePoint(-118.2908167352302, 34.01891673252021), 'Parkside Restaurant'),
+   (5, ST_MakePoint(-118.28124544247733, 34.01980365304956), 'Rosso Oro''s'),
+   (6, ST_MakePoint(-118.28522341270839, 34.02524491237083), 'Dulce'),
+   (7, ST_MakePoint(-118.28313095596786, 34.021690310163685), 'Leavey Library'),
+   (8, ST_MakePoint(-118.28417628083218, 34.02030489410648), 'Doheny Library'),
+   (9, ST_MakePoint(-118.28676086181471, 34.01884175947583), 'Hoose Library'),
+   (10, ST_MakePoint(-118.28602654529098, 34.02041779806548), 'RTCC Fountain'),
+   (11, ST_MakePoint(-118.28424026594935, 34.01929238032499), 'Court of Recognition Fountain'),
+   (12, ST_MakePoint(-118.28547271262394, 34.021978284013294), 'Binge Theatre Fountain'),
+   (13, ST_MakePoint(-118.29421903620806, 34.02020100918175), 'Home');
+
+--Convex Hull
+SELECT ST_AsText(ST_ConvexHull(
+    ST_Collect(
+        ST_GeomFromText('MULTIPOINT(
+            -118.28818853024234 34.02154713406602,
+            -118.29009767632772 34.02010599154422,
+            -118.28631341468385 34.02366683355916,
+            -118.2908167352302 34.01891673252021,
+            -118.28124544247733 34.01980365304956,
+            -118.28522341270839 34.02524491237083,
+            -118.28313095596786 34.021690310163685,
+            -118.28417628083218 34.02030489410648,
+            -118.28676086181471 34.01884175947583,
+            -118.28602654529098 34.02041779806548,
+            -118.28424026594935 34.01929238032499,
+            -118.28547271262394 34.021978284013294,
+            -118.29421903620806 34.02020100918175)'))) );
+
+--KNN
+select row_id,location_name ,location_point <-> ST_Makepoint(-118.29421903620806, 34.02020100918175) as dist
+from coordinates order by dist limit 5

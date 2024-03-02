@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>Parkside Restaurant</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2908167352302,34.01891673252021 </coordinates></Point>
+</Placemark>
+<Placemark><name>Rosso Oro's</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28124544247733,34.01980365304956 </coordinates></Point>
+</Placemark>
+<Placemark><name>Dulce</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28522341270839,34.02524491237083</coordinates></Point>
+</Placemark>
+</Document></kml>

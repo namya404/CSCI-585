@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>RTCC Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28602654529098,34.02041779806548</coordinates></Point>
+</Placemark>
+<Placemark><name>Court of Recognition Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28424026594935,34.01929238032499</coordinates></Point>
+</Placemark>
+<Placemark><name>Binge Theatre Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28547271262394,34.021978284013294</coordinates></Point>
+</Placemark>
+</Document></kml>

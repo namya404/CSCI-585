@@ -1,0 +1,155 @@
+
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+<LabelStyle>    
+	<color>ffffbf00</color>
+  </LabelStyle>
+</Style>
+
+    <Style id="BlueStyle">
+      <LineStyle>
+        <width>1.5</width>
+		<color>#ffd4ff7f</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>fffffff0</color>
+      </PolyStyle>
+    </Style>
+
+<Placemark><name>Ford Salvatori Hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28818853024234,34.02154713406602</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Gerontology center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.29009767632772,34.02010599154422</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Cinematic Arts School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28631341468385,34.02366683355916</coordinates></Point>
+</Placemark>
+	
+<Placemark><name>Parkside Restaurant</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2908167352302,34.01891673252021 </coordinates></Point>
+
+</Placemark>
+<Placemark><name>Rosso Oro's</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28124544247733,34.01980365304956 </coordinates></Point>
+
+</Placemark>
+<Placemark><name>Dulce</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28522341270839,34.02524491237083</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Leavey Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28313095596786,34.021690310163685</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Doheny Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28417628083218,34.02030489410648</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Hoose Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28676086181471,34.01884175947583</coordinates></Point>
+</Placemark>
+
+<Placemark><name>RTCC Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28602654529098,34.02041779806548</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Court of Recognition Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28424026594935,34.01929238032499</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Binge Theatre Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28547271262394,34.021978284013294</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Home</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.29421903620806,34.02020100918175</coordinates></Point>
+</Placemark>
+
+    <Placemark>
+      <name>Convex Hull</name>
+      <styleUrl>#BlueStyle</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+        <coordinates> 
+		-118.28676086181471,34.01884175947583
+		-118.2908167352302,34.01891673252021
+		-118.29421903620806,34.02020100918175
+		-118.28522341270839,34.02524491237083
+		-118.28124544247733,34.01980365304956
+		-118.28676086181471,34.01884175947583
+	  </coordinates>
+        </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+	
+	
+	<Placemark>
+      <name>Home to Parkside Restaurant</name>
+      <styleUrl>#BlueStyle</styleUrl>      
+        <extrude>1</extrude>          
+        <LineString>
+        <coordinates> 
+		-118.29421903620806,34.02020100918175,100
+		-118.2908167352302,34.01891673252021,100			
+		</coordinates>
+        </LineString>        
+    </Placemark>
+	
+	<Placemark>
+      <name>Home to Gerontology center</name>
+      <styleUrl>#BlueStyle</styleUrl>             
+        <LineString>
+        <coordinates> 
+		-118.29421903620806,34.02020100918175,100
+		-118.29009767632772,34.02010599154422,100		
+	  </coordinates>
+      </LineString>        
+    </Placemark>
+	
+	<Placemark>
+      <name>Home to Ford Salvatori Hall</name>
+      <styleUrl>#BlueStyle</styleUrl>      
+        <extrude>1</extrude>           
+          <LineString>
+        <coordinates> 
+		-118.29421903620806,34.02020100918175,100
+		-118.28818853024234,34.02154713406602,100		
+	  </coordinates>
+        </LineString>        
+    </Placemark>
+	
+	<Placemark>
+      <name>Home to Hoose Library</name>
+      <styleUrl>#BlueStyle</styleUrl>      
+        <extrude>1</extrude>      
+         <LineString>
+        <coordinates> 
+		-118.29421903620806,34.02020100918175,100
+		-118.28676086181471,34.01884175947583,100		
+	  </coordinates>
+      </LineString>        
+    </Placemark>		
+	
+  </Document>
+</kml>
+
+
+
+
+	
+ 
+
+
+
+	
+ 
+
